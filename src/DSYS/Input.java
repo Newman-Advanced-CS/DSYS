@@ -8,15 +8,6 @@ import java.util.Scanner;
 public class Input {
     public static Scanner scanner = new Scanner(System.in);
 
-    public static boolean intIsParsable(String input) {
-        try {
-            Integer.parseInt(input);
-            return true;
-        } catch (final NumberFormatException e) {
-            return false;
-        }
-    }
-
     public static String getString(String prompt)
     {
         System.out.print(prompt);
@@ -31,7 +22,7 @@ public class Input {
             System.out.print(prompt);
             String input = scanner.nextLine();
 
-            if(intIsParsable(input))
+            if(Data.intIsParsable(input))
             {
                 result = Integer.parseInt(input);
                 gotInt = true;
@@ -41,10 +32,28 @@ public class Input {
         return result;
     }
 
+    public static float getFloat(String prompt)
+    {
+        float result = 0;
+        boolean gotFloat = false;
+        do {
+            System.out.print(prompt);
+            String input = scanner.nextLine();
+
+            if(Data.floatIsParsable(input))
+            {
+                result = Float.parseFloat(input);
+                gotFloat = true;
+            }
+        }
+        while(!gotFloat);
+        return result;
+    }
+
     public static char getChar(String prompt)
     {
         System.out.print(prompt);
-        return scanner.next().charAt(0);
+        return scanner.nextLine().charAt(0);
     }
 
     public static boolean getBool(String prompt, char t, char f)

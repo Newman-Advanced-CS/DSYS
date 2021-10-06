@@ -43,4 +43,10 @@ public class IO {
         printWriter.print(contents);
         printWriter.close();
     }
+
+    // Append file contents
+    public static void append(String path, String contents) {
+        String newContent = read(path) + contents;
+        write(path, newContent);
+    }
 }
