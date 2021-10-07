@@ -22,7 +22,7 @@ public class Input {
             System.out.print(prompt);
             String input = scanner.nextLine();
 
-            if(Data.intIsParsable(input))
+            if(Base.intIsParsable(input))
             {
                 result = Integer.parseInt(input);
                 gotInt = true;
@@ -40,7 +40,7 @@ public class Input {
             System.out.print(prompt);
             String input = scanner.nextLine();
 
-            if(Data.floatIsParsable(input))
+            if(Base.floatIsParsable(input))
             {
                 result = Float.parseFloat(input);
                 gotFloat = true;
