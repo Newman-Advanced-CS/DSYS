@@ -1,2 +1,2 @@
-This is a string!
-append this please
+Hello!
+Appended!

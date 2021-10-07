@@ -49,4 +49,10 @@ public class IO {
         String newContent = read(path) + contents;
         write(path, newContent);
     }
+
+    // Check if file exists
+    public static boolean fileExists(String path) {
+        File toCheck = new File(path);
+        return toCheck.exists();
+    }
 }

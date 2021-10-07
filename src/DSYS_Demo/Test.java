@@ -35,5 +35,8 @@ public class Test {
 
         String appendText = Input.getString("append: ");
         IO.append(writeFile, appendText);
+
+        String pathCheck = Input.getString("does this path exist: ");
+        Base.println(IO.fileExists(pathCheck));
     }
 }
