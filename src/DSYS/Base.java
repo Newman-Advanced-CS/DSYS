@@ -1,9 +1,5 @@
 package DSYS;
 
-/**
- * @author Declan J. Scott
- * */
-
 public class Base {
     public static boolean intIsParsable(String input) {
         try {
@@ -27,8 +23,10 @@ public class Base {
     public static void println(Object output) {
         System.out.println(output);
     }
+    public static void print(Object output) { System.out.print(output); }
 
-    public static void print(Object output) {
-        System.out.print(output);
+    // Change color of console text
+    public static void changeColor(String color) {
+        print(color);
     }
 }
