@@ -19,6 +19,11 @@ public class Base {
         }
     }
 
+    public static float ClampBetween(float value, float max, float min)
+    {
+        return Math.min(Math.max(value, min), max);
+    }
+
     // No different from the default print functions, just a simpler syntax
     public static void println(Object output) {
         System.out.println(output);

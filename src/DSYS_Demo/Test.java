@@ -26,7 +26,6 @@ public class Test {
         boolean inBool = Input.getBool("bool (y/n): ", 'y', 'n');
         Base.println(inBool);
 
-
         Base.changeColor(Colors.TEXT_GREEN);
 
         // Reading/Writing/Appending files
