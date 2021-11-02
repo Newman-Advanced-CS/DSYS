@@ -1,6 +1,7 @@
 package DSYS_Demo;
 
 import DSYS.*;
+import DSYS.GUI.Window;
 
 /**
  * @author Declan J. Scott
@@ -42,5 +43,7 @@ public class Test {
 
         String pathCheck = Input.getString("does this path exist: ");
         Base.println(IO.fileExists(pathCheck));
+
+        Window.TextAlert("Test", "Finished DSYS test");
     }
 }
